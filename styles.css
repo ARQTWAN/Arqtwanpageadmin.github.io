@@ -1,0 +1,308 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Colores */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #00aaff;
+    --dark-bg: #333333;
+    --light-bg: #f4f4f4;
+    --text-color: #ffffff;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Nav links desktop */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Checkbox toggle */
+#menu-toggle {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    background-image: url('arqtwan.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Botón solicitar licencia */
+#solicitar-licencia {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#solicitar-licencia .btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#solicitar-licencia .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Servicios */
+#services {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sobre Nosotros */
+#about {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Formulario */
+#request-form {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#request-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#request-form input,
+#request-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#request-form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#request-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Botón de WhatsApp flotante */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen del logo */
+.whatsapp-logo {
+    width: 60px;
+    height: 60px;
+    background-color: transparent; /* asegura transparencia */
+    border-radius: 50%; /* hace el logo redondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.whatsapp-btn:hover .whatsapp-logo {
+    transform: scale(1.1); /* crece ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* sombra más intensa */
+}
+
+
+/* Contacto */
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menú hamburguesa */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Checkbox toggle */
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+
+    header nav {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #services h2,
+    #about h2 {
+        font-size: 28px;
+    }
+
+    #about p,
+    .service-item p {
+        font-size: 16px;
+    }
+
+    #request-form button {
+        font-size: 16px;
+    }
+}
